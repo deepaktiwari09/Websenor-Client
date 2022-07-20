@@ -72,26 +72,6 @@ export default function HomeScreen({ navigation, route }) {
                     </ScrollView>
                 </View>
             </View>
-            {/* <View style={containers.VacanciesContainer}>
-                <Text style={styles.servicetitle}>Job Vacancies</Text>
-                <View style={containers.ServicesScrollContainer}>
-                    <ScrollView horizontal={true}>
-                        {Data.services.map((item, index) => {
-                            return (
-                                <Pressable key={index} style={containers.ServiceItemContainer}
-                                    onPress={() => {
-                                        serviceRef.current?.open();
-                                        setServiceIndex(index);
-                                    }}
-                                >
-                                    <Image source={{ uri: item.image }} style={{ width: 50, height: 50 }} />
-                                    <Text style={styles.serviceitemtext}>{item.name}</Text>
-                                </Pressable>
-                            )
-                        })}
-                    </ScrollView>
-                </View>
-            </View> */}
             <View style={containers.companyProfileContainer}>
 
                 <Text style={styles.companyprofileText}>
