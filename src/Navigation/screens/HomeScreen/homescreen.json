@@ -1,0 +1,63 @@
+{
+    "name": "websenor",
+    "website": "",
+    "about": "",
+    "locations": [
+        "Udaipur, India",
+        "Ahamdabad, India",
+        "Banglore, India",
+        "Delhi, India",
+        "Mumbai, India",
+        "New York, USA",
+        "Los Angeles, USA",
+        "Chicago, USA",
+        "Houston, USA",
+        "Philadelphia, USA",
+        "Phoenix, USA",
+        "San Antonio, USA",
+        "San Diego, USA",
+        "Dallas, USA",
+        "London, UK",
+        "Birmingham, UK",
+        "Leeds, UK",
+        "Manchester, UK",
+        "Liverpool, UK",
+        "Bristol, UK",
+        "Edinburgh, UK",
+        "Glasgow, UK",
+        "Sheffield, UK",
+        "Kuwait, Kuwait"
+    ],
+    "events": [
+        "https://www.showtimeevent.com/images/main-slider/corporate-event-planner.webp",
+        "https://blog.venuelook.com/wp-content/uploads/2019/07/Featured-Image.jpg",
+        "https://cajundanceparty.com/wp-content/uploads/2019/06/Corporate-Event-Design.jpg",
+        "https://www.benchmarkeventz.com/Gallery/b61591f1-ca0b-4287-a064-a30d7032a7f6_thumb.jpg"
+    ],
+    "services": [
+        {
+            "name": "IT & Software",
+            "image": "https://cdn2.iconfinder.com/data/icons/business-and-finance-5-7/100/line-112-512.png"
+        },
+        {
+            "name": "Online Retail",
+            "image": "https://www.kindpng.com/picc/m/235-2350524_store-vector-icon-retail-store-icon-png-transparent.png"
+        },
+        {
+            "name": "Online Government",
+            "image": "http://globalize.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/04/icon-government.png"
+        },
+        {
+            "name": "Entertainment",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKzWpqW3rcm89e2t5WiiYM9FLG0mF0C-lYDC-4qAw7mxp9cd3nwlqwQrIEeX0Q8IQLgC4&usqp=CAU"
+        },
+        {
+            "name": "Hospitality",
+            "image": "https://previews.123rf.com/images/bsd555/bsd5551911/bsd555191102250/133938046-hospitality-industry-red-flat-design-long-shadow-glyph-icon-receptionist-with-tourist-hotel-manageme.jpg"
+        },
+        {
+            "name": "Aerospace",
+            "image": "https://png.pngtree.com/png-vector/20191007/ourmid/pngtree-airplane-icon-png-image_1798502.jpg"
+        },
+    ]
+}
