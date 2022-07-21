@@ -37,7 +37,7 @@ export const createContainers = (colors: Color) => StyleSheet.create({
         alignSelf: 'flex-start',
         borderRadius: 10,
         elevation: 3,
-        borderColor: colors.Primary,
+        borderColor: colors.Outline,
         borderWidth: 1,
         borderStyle: 'solid',
     },
@@ -45,7 +45,7 @@ export const createContainers = (colors: Color) => StyleSheet.create({
         // backgroundColor: colors.Primary,
         paddingVertical: 30,
         paddingHorizontal: 20,
-        borderTopColor: colors.Primary,
+        borderTopColor: colors.Outline,
         borderTopWidth: 1,
         borderStyle: 'solid',
         // alignSelf: 'flex-start',
@@ -69,20 +69,25 @@ export const createStyles = (colors: Color, font: Font) => StyleSheet.create({
         marginTop: 20
     },
     textInput: {
-        borderBottomWidth: 1,
-        borderBottomColor: colors.Outline,
-        borderStyle: 'solid',
+        // borderBottomWidth: 1,
+        // borderBottomColor: colors.Outline,
+        // borderStyle: 'solid',
         paddingVertical: 10,
-        paddingHorizontal: 10,
-        // fontSize: font.md,
+        paddingHorizontal: 20,
+        marginVertical: 10,
+        marginHorizontal: 3,
+        borderRadius: 8,
+        fontSize: width * 0.035,
         color: 'black',
+        elevation: 3,
+        backgroundColor: 'white',
     },
     servicelable: {
         color: 'rgba(51,51,51,0.5)',
         marginTop: 20,
     },
     checkBoxText: {
-        color: colors.Primary,
+        color: colors.Text,
         width: width
         // fontSize: font.md,
 
@@ -92,12 +97,12 @@ export const createStyles = (colors: Color, font: Font) => StyleSheet.create({
         marginVertical: 15
     },
     chosenFiletext: {
-        color: colors.Primary,
+        color: colors.Text,
         fontFamily: 'Roboto-Medium',
         // fontSize: width * font.md,
     },
     selectedfiletext: {
-        color: colors.Primary,
+        color: colors.Text,
         fontSize: width * font.sm,
         fontFamily: font.Primary,
         marginLeft: 10

@@ -1,7 +1,7 @@
 {
-    "name": "websenor",
+    "name": "WebSenor",
     "website": "",
-    "about": "",
+    "about": "WebSenor – An IT company based in India, divided in USA, UK, Kuwait & India. We deliver the art services of IT & ITES to the global market and also deal in Website design & Development, Software development, Mobile Applications development, Remote Employee & Digital Marketing services.The firm was established in 2010 and was revised as WebSenor in 2013. Our founder Mr Shubham Soni started this company with a strong ideology to serve the high quality services and products to SMEs.",
     "locations": [
         "Udaipur, India",
         "Ahamdabad, India",
@@ -27,6 +27,50 @@
         "Glasgow, UK",
         "Sheffield, UK",
         "Kuwait, Kuwait"
+    ],
+    "jobs": [
+        {
+            "title": "React Native Developer",
+            "image": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
+            "date": "21 July 2022",
+            "vaccancies": "12"
+        },
+        {
+            "title": "Flutter Developer",
+            "image": "https://www.softuvo.com/assets/font-end/images/Flutter.png",
+            "date": "8 July 2022",
+            "vaccancies": "4"
+        },
+        {
+            "title": "Laravel Developer",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png",
+            "date": "18 June 2022",
+            "vaccancies": "4"
+        },
+        {
+            "title": "Software Tester",
+            "image": "https://seeklogo.com/images/J/jest-logo-F9901EBBF7-seeklogo.com.png",
+            "date": "12 June 2022",
+            "vaccancies": "4"
+        },
+        {
+            "title": "Next.js Developer",
+            "image": "https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png",
+            "date": "8 June 2022",
+            "vaccancies": "2"
+        },
+        {
+            "title": "Frontend Developer",
+            "image": "https://icon-library.com/images/web-development-icon-png/web-development-icon-png-10.jpg",
+            "date": "2 June 2022",
+            "vaccancies": "2"
+        },
+        {
+            "title": "UI/UX Designer",
+            "image": "https://static.vecteezy.com/system/resources/thumbnails/002/162/778/small/ux-working-process-team-free-vector.jpg",
+            "date": "22 May 2022",
+            "vaccancies": "2"
+        }
     ],
     "events": [
         "https://www.showtimeevent.com/images/main-slider/corporate-event-planner.webp",

@@ -6,6 +6,8 @@ import { RootState } from '../../Management';
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import DocumentPicker from 'react-native-document-picker'
 
+import LottieView from 'lottie-react-native';
+import { MassageSentAnimation } from '../../assets'
 
 const formcheckbox = ['Hire a resource / team on Remote', 'Web Design & Development', 'Mobile Application Development', 'Annual Maintenance - AMC', 'Digital Marketing', 'Ecommerce Solutions', 'SEO (Search Engine Optimisation)', 'Software Development', 'other']
 
@@ -14,24 +16,25 @@ export default function RequestForm() {
     const styles = useMemo(() => createStyles(colors, fonts), [colors]);
     const containers = useMemo(() => createContainers(colors), [colors]);
     const [selectedfilename, setSelectedfilename] = useState('');
+    const [ismassagesend, setismassagesend] = useState(false);
     return (
         <ScrollView style={containers.Form}>
             <View style={containers.TextInputContainer}>
-                <Text style={styles.lable}>Your name</Text>
+                {/* <Text style={styles.lable}>Your name</Text> */}
                 <TextInput
                     style={styles.textInput}
                     placeholder='Please fill your Full name here'
                     placeholderTextColor={'rgba(51,51,51,.5)'}
 
                 />
-                <Text style={styles.lable}>Phone Number</Text>
+                {/* <Text style={styles.lable}>Phone Number</Text> */}
                 <TextInput
                     style={styles.textInput}
                     placeholder='Your Phone Number'
                     placeholderTextColor={'rgba(51,51,51,.5)'}
 
                 />
-                <Text style={styles.lable}>Your Email</Text>
+                {/* <Text style={styles.lable}>Your Email</Text> */}
                 <TextInput
                     style={styles.textInput}
                     placeholder='Your Email Address'
@@ -47,6 +50,8 @@ export default function RequestForm() {
                         return (
                             <View key={index} style={containers.CheckBox}>
                                 <BouncyCheckbox
+                                    fillColor={colors.Secondry}
+
                                     style={{ borderColor: 'blue' }}
                                 />
                                 <Text style={styles.checkBoxText}>{item}</Text>
@@ -58,7 +63,11 @@ export default function RequestForm() {
             </View>
             <View style={containers.projectDetailsContainer}>
                 <Text style={[styles.lable]}>Project details</Text>
-                <TextInput style={styles.textInput} placeholder='Submit your project requirements or query. We are happy to assist you.' placeholderTextColor={'rgba(51,51,51,.5)'} />
+                <Text style={styles.servicelable}>Submit your project requirements or query. We are happy to assist you.</Text>
+                <TextInput
+                    style={[styles.textInput, { textAlignVertical: 'top' }]}
+                    multiline={true}
+                    numberOfLines={8} />
             </View>
             <View style={containers.projectDetailsContainer}>
                 <Text style={[styles.lable, { marginTop: 0 }]}>Upload Document</Text>
@@ -82,9 +91,19 @@ export default function RequestForm() {
                 </View>
             </View>
             <View style={containers.submitButtonContainer}>
-                <TouchableOpacity style={containers.submitButton}>
-                    <Text style={styles.submitButtontext}>Submit</Text>
-                </TouchableOpacity>
+                {!ismassagesend ?
+                    <TouchableOpacity style={containers.submitButton}
+                        onPress={() => {
+                            setismassagesend(true)
+                        }}
+                    >
+                        <Text style={styles.submitButtontext}>Submit</Text>
+                    </TouchableOpacity> :
+                    <View style={[{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }]}>
+                        <LottieView source={MassageSentAnimation} autoPlay loop={false} style={{ width: 50, height: 50 }} />
+                        <Text style={styles.chosenFiletext}>Request Recived</Text>
+                    </View>
+                }
             </View>
         </ScrollView>
     )

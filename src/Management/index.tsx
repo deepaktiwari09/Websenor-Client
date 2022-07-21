@@ -1,10 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { apperienceManager } from './app/appApperienceManager';
-
+import { locationManagerReducer } from './app/applocationManager';
 
 export const store = configureStore({
     reducer: {
-        apperienceManager: apperienceManager
+        apperienceManager: apperienceManager,
+        locationManager: locationManagerReducer
     }
 });
 

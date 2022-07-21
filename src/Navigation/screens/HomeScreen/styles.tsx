@@ -19,10 +19,10 @@ export const createContainers = (colors: Color) => StyleSheet.create({
         paddingHorizontal: 20
     },
     requestContainer: {
-        backgroundColor: colors.Primary,
-        alignSelf: 'flex-start',
+        backgroundColor: colors.Secondry,
+        alignSelf: 'center',
         paddingHorizontal: 20,
-        paddingVertical: 15,
+        paddingVertical: 10,
         borderRadius: 10,
         flexDirection: 'row',
         elevation: 5
@@ -42,7 +42,7 @@ export const createContainers = (colors: Color) => StyleSheet.create({
         height: 160,
     },
     ServicesContainer: {
-        paddingHorizontal: 20,
+        paddingLeft: 20,
         marginVertical: 30
     },
     ServicesScrollContainer: {
@@ -57,8 +57,8 @@ export const createContainers = (colors: Color) => StyleSheet.create({
         marginVertical: 10,
         marginHorizontal: 10,
         alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingVertical: 30,
+        justifyContent: 'flex-end',
+        paddingVertical: 20,
     },
     QuoteContainer: {
         paddingTop: 15
@@ -84,7 +84,37 @@ export const createContainers = (colors: Color) => StyleSheet.create({
         backgroundColor: 'white',
         marginHorizontal: 5,
         marginVertical: 10
-    }
+    },
+    JobsContainer: {
+        // paddingLeft: 20,
+        marginVertical: 30
+    },
+    JobsScrollContainer: {
+        // paddingLeft: 20
+    },
+    JobsItemContainer: {
+        height: 200,
+        width: width / 2,
+        backgroundColor: 'white',
+        elevation: 3,
+        borderRadius: 10,
+        marginVertical: 15,
+        marginLeft: 20,
+        marginRight: 20,
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingVertical: 30,
+    },
+    ApplyButtonContainer: {
+        backgroundColor: colors.Primary,
+        paddingHorizontal: 20,
+        paddingVertical: 8,
+        borderRadius: 10,
+        flexDirection: 'row',
+        elevation: 3,
+        marginTop: 10
+
+    },
 
 })
 
@@ -97,7 +127,8 @@ export const createStyles = (colors: Color, font: Font) => StyleSheet.create({
         fontSize: width * font.md,
         textAlign: 'center',
         fontFamily: font.Primary,
-        color: colors.Text,
+        color: colors.Secondry,
+        fontWeight: 'bold'
     },
     locationtext: {
         fontSize: width * font.md,
@@ -151,10 +182,39 @@ export const createStyles = (colors: Color, font: Font) => StyleSheet.create({
 
     },
     locationslectionbuttonext: {
+        fontSize: width * 0.037,
+        // textAlign: 'center',
+        fontFamily: font.Primary,
+        color: colors.Text,
+        fontWeight: 'bold',
+    },
+    jobtitle: {
         fontSize: width * font.sm,
         // textAlign: 'center',
         fontFamily: font.Primary,
-        color: colors.Primary,
+        color: colors.Text,
+        fontWeight: 'bold',
+        marginVertical: 10,
+        marginHorizontal: 20
+    },
+    jobsitemtext: {
+        fontSize: width * font.xs,
+        textAlign: 'center',
+        fontFamily: font.Primary,
+        color: colors.Text,
+        fontWeight: 'bold',
+    },
+    ApplyButtontext: {
+        fontSize: width * font.xs,
+        textAlign: 'center',
+        fontFamily: font.Primary,
+        color: colors.OnPrimary,
+    },
+    vaccancytext: {
+        fontSize: width * font.xs,
+        textAlign: 'center',
+        fontFamily: font.Primary,
+        color: colors.OnPrimary,
         fontWeight: 'bold',
     }
 

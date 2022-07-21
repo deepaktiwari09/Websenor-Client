@@ -4,12 +4,12 @@ const colors = {
     Background: 'white',
     OnBackground: '',
     Surface: '#787A91',
-    Primary: '#141E61',
+    Primary: '#0077ED',
     OnPrimary: 'white',
-    Secondry: '#141E61',
+    Secondry: '#CA2166',
     OnSecondry: 'white',
     Text: 'rgba(51,51,51,1)',
-    Outline: '#141E61'
+    Outline: '#CA2166'
 }
 
 const fonts = {

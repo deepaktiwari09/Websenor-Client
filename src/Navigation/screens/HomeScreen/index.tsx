@@ -1,31 +1,43 @@
 import { View, Text, Image, TouchableOpacity, ScrollView, Pressable, Dimensions } from 'react-native';
 import React, { useMemo, useRef, useState } from 'react';
 import { createStyles, createContainers } from './styles';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../../Management';
-import { SwiperFlatList } from 'react-native-swiper-flatlist';
-import * as Data from './homescreen';
-import RBSheet from 'react-native-raw-bottom-sheet';
 
-import RequestForm from '../../../Components/form';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '../../../Management';
+import { setLocation } from '../../../Management/app/applocationManager';
+
+import { SwiperFlatList } from 'react-native-swiper-flatlist'; 9
+import * as Data from './homescreen';
+
+import RBSheet from 'react-native-raw-bottom-sheet';
+import Modal from "react-native-modal";
+
+import RequestForm from '../../../Components/RequestForm';
+import VaccancyForm from '../../../Components/VaccancyForm';
 
 export default function HomeScreen({ navigation, route }) {
 
     const { colors, fonts } = useSelector((state: RootState) => state.apperienceManager);
+    const { location } = useSelector((state: RootState) => state.locationManager);
+    const dispatch = useDispatch();
 
     const styles = useMemo(() => createStyles(colors, fonts), [colors]);
     const containers = useMemo(() => createContainers(colors), [colors]);
     const locationRef = useRef();
     const QuoteFormRef = useRef();
+    const VaccancyFormRef = useRef();
 
-    const [currentlocationIndex, setcurrentlocationIndex] = useState(0);
+    const [currentjobindex, setCurrentjobindex] = useState(0);
+    const [isjobdetails, setisjobdetails] = useState(false);
+
     return (
         <ScrollView style={containers.main}>
             <View style={containers.headerContainer}>
                 <Pressable onPress={() => {
                     locationRef.current?.open();
                 }} style={{ flexDirection: 'row', alignItems: 'center' }}>
-                    <Text style={[styles.text, styles.locationtext]}>{Data.locations[currentlocationIndex]}</Text>
+                    <Text style={[styles.text, styles.locationtext]}>{location}</Text>
                     <Image source={require('../../../assets/images/downarrow.png')} style={{ width: 18, height: 18, marginLeft: 10, marginTop: 5 }} />
                 </Pressable>
                 <Text style={[styles.text, styles.logotext]}>Websenor</Text>
@@ -64,8 +76,16 @@ export default function HomeScreen({ navigation, route }) {
                                 <View key={index} style={containers.ServiceItemContainer}
 
                                 >
-                                    <Image source={{ uri: item.image }} style={{ width: 50, height: 50 }} />
+                                    <Image source={{ uri: item.image }} style={{ width: 50, height: 50, marginBottom: 20 }} />
                                     <Text style={styles.serviceitemtext}>{item.name}</Text>
+                                    <TouchableOpacity style={{}}
+                                        onPress={() => {
+                                            // setCurrentjobindex(index);
+                                            // VaccancyFormRef.current?.open();
+                                        }}
+                                    >
+                                        <Text style={[styles.ApplyButtontext, { color: colors.Primary, marginTop: 5 }]}>Details</Text>
+                                    </TouchableOpacity>
                                 </View>
                             )
                         })}
@@ -74,16 +94,56 @@ export default function HomeScreen({ navigation, route }) {
             </View>
             <View style={containers.companyProfileContainer}>
 
-                <Text style={styles.companyprofileText}>
-                    WebSenor – An IT company based in India, divided in USA, UK, Kuwait & India. We deliver the art services of IT & ITES to the global market and also deal in Website design & Development, Software development, Mobile Applications development, Remote Employee & Digital Marketing services.
-                    The firm was established in 2010 and was revised as WebSenor in 2013. Our founder Mr Shubham Soni started this company with a strong ideology to serve the high quality services and products to SMEs.
-                </Text>
+                <Text style={styles.companyprofileText}>{Data.about}</Text>
                 <TouchableOpacity style={containers.requestContainer} onPress={() => {
                     QuoteFormRef.current?.open();
                 }}>
                     <Text style={styles.requestButtonText}>Request a quote</Text>
                     <Image source={require('../../../assets/images/RightArrow.png')} style={containers.requestImage} />
                 </TouchableOpacity>
+            </View>
+            <View style={containers.JobsContainer}>
+                <Text style={styles.jobtitle}>Jobs at Websenor</Text>
+                <View style={containers.JobsScrollContainer}>
+                    <ScrollView horizontal={true}>
+                        {Data.jobs.map((item, index) => {
+                            return (
+                                <View key={index} style={[containers.JobsItemContainer, { marginLeft: (index === 0 ? 20 : 0) }]}
+                                >
+                                    <Image source={{ uri: item.image }} style={{ width: 50, height: 50 }} />
+                                    <View>
+                                        <Text style={styles.jobsitemtext}>{item.title}</Text>
+
+                                        <Text style={styles.jobsitemtext}>{item.date}</Text>
+                                    </View>
+                                    <View style={{ flexDirection: 'row', alignItems: 'center', width: '100%', justifyContent: 'space-between', paddingHorizontal: 40 }}>
+
+                                        <TouchableOpacity style={[containers.ApplyButtonContainer, {
+                                            marginRight: 15
+                                        }]}
+                                            onPress={() => {
+                                                setCurrentjobindex(index);
+                                                VaccancyFormRef.current?.open();
+                                            }}
+                                        >
+                                            <Text style={styles.ApplyButtontext}>Apply</Text>
+                                        </TouchableOpacity>
+                                        <TouchableOpacity style={{}}
+                                            onPress={() => {
+                                                // setCurrentjobindex(index);
+                                                // VaccancyFormRef.current?.open();
+                                                setisjobdetails(true);
+                                            }}
+                                        >
+                                            <Text style={[styles.ApplyButtontext, { color: colors.Primary, marginTop: 5 }]}>Details</Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                </View>
+                            )
+                        })}
+                    </ScrollView>
+                </View>
             </View>
             <RBSheet
                 ref={locationRef}
@@ -96,7 +156,7 @@ export default function HomeScreen({ navigation, route }) {
                             return (
                                 <Pressable key={index} onPress={() => {
                                     locationRef.current?.close();
-                                    setcurrentlocationIndex(index);
+                                    dispatch(setLocation(location));
                                 }}
                                     style={containers.locationItemContainer}
                                 >
@@ -116,14 +176,54 @@ export default function HomeScreen({ navigation, route }) {
                         <Text style={styles.QuoteHeaderText}>Request a free quote</Text>
                         <Pressable onPress={() => {
                             QuoteFormRef.current?.close();
+
                         }}>
                             <Image source={require('../../../assets/images/close.png')} style={{ width: 25, height: 25 }} />
-                            {/* <Text style={styles.eventText}>X</Text> */}
                         </Pressable>
+
                     </View>
                     <RequestForm />
                 </View>
             </RBSheet>
+            <RBSheet
+                ref={VaccancyFormRef}
+                height={Dimensions.get('window').height}
+            >
+                <View style={containers.QuoteContainer}>
+                    <View style={containers.QuoteHeaderContainer}>
+                        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                            <Image source={{ uri: Data.jobs[currentjobindex].image }} style={{ width: 30, height: 30 }} />
+                            {/* <Text style={[styles.QuoteHeaderText, { marginLeft: 10 }]}>Vaccancy Form</Text> */}
+
+                        </View>
+                        <Pressable onPress={() => {
+                            VaccancyFormRef.current?.close();
+
+                        }}>
+                            <Image source={require('../../../assets/images/close.png')} style={{ width: 25, height: 25 }} />
+                        </Pressable>
+
+                    </View>
+                    <VaccancyForm />
+                </View>
+            </RBSheet>
+            <Modal
+                isVisible={isjobdetails}
+            // hasBackdrop={true}
+            >
+                <View style={{ flex: 1, paddingHorizontal: 10, paddingVertical: 40 }}>
+                    <View style={{ flex: 1, borderRadius: 10, backgroundColor: 'white' }}>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, paddingVertical: 20 }}>
+                            <Text>I am the modal content!</Text>
+                            <Pressable onPress={() => {
+                                setisjobdetails(false);
+                            }}>
+                                <Image source={require('../../../assets/images/close.png')} style={{ width: 25, height: 25 }} />
+                            </Pressable>
+                        </View>
+                    </View>
+                </View>
+            </Modal>
         </ScrollView>
     )
 }
