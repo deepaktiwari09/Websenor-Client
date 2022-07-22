@@ -241,19 +241,8 @@ export default function HomeScreen({ navigation, route }) {
                                     <Pressable key={index} style={containers.PortfolioItemContainer}
                                         onPress={() => { setisportfolio(true); setCurrentportfolioindex(index); }}
                                     >
-                                        <SwiperFlatList
-                                            style={containers.portfolioImages}
-                                            data={item.images}
-                                            renderItem={({ item }) => {
-                                                return (
-                                                    <Image source={{ uri: item }} style={containers.portfolioImages} />
-                                                )
-                                            }}
-                                            autoplay
-                                            autoplayDelay={8}
-                                            autoplayLoop
+                                        <Image source={{ uri: item.images[0] }} style={containers.portfolioImages} />
 
-                                        />
                                         <View>
                                             <Text style={styles.portfolioitemtext}>{item.name}</Text>
                                         </View>
@@ -286,7 +275,7 @@ export default function HomeScreen({ navigation, route }) {
                                 )
                             }}
                             autoplay
-                            autoplayDelay={3}
+                            autoplayDelay={2}
                             autoplayLoop
 
                         />
