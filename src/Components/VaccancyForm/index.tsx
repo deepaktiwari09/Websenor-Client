@@ -152,7 +152,7 @@ export default function VaccancyForm() {
                 })}
             </View>
             <View style={containers.projectDetailsContainer}>
-                <Text style={[styles.lable, { marginTop: 0 }]}>Upload CV</Text>
+                <Text style={[styles.lable, { marginTop: 0 }]}>Upload Document</Text>
                 <View style={containers.DocumentButtonContainer}>
                     <TouchableOpacity style={containers.chooseFileButtonContainer}
                         onPress={async () => {
@@ -167,7 +167,7 @@ export default function VaccancyForm() {
                             }
                         }}
                     >
-                        <Text style={styles.chosenFiletext}>Choose File</Text>
+                        <Text style={styles.chosenFiletext}>Choose CV File</Text>
                     </TouchableOpacity>
                     {formdata.CVfile.name && <Text style={styles.selectedfiletext}>{formdata.CVfile.name}</Text>}
                 </View>

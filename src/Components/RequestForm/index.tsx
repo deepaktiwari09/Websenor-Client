@@ -138,7 +138,7 @@ export default function RequestForm() {
                             }
                         }}
                     >
-                        <Text style={styles.chosenFiletext}>Choose File</Text>
+                        <Text style={styles.chosenFiletext}>Choose SRS File</Text>
                     </TouchableOpacity>
                     {formdata.file.name && <Text style={styles.selectedfiletext}>{formdata.file.name}</Text>}
                 </View>
