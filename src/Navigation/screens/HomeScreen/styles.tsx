@@ -42,7 +42,7 @@ export const createContainers = (colors: Color) => StyleSheet.create({
         height: 160,
     },
     ServicesContainer: {
-        paddingLeft: 20,
+        // paddingLeft: 20,
         marginVertical: 30
     },
     ServicesScrollContainer: {
@@ -165,7 +165,8 @@ export const createStyles = (colors: Color, font: Font) => StyleSheet.create({
         fontFamily: font.Primary,
         color: colors.Text,
         fontWeight: 'bold',
-        marginVertical: 10
+        marginVertical: 10,
+        marginLeft: 20
     },
     serviceitemtext: {
         fontSize: width * font.xs,

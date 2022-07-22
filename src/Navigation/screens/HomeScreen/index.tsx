@@ -73,7 +73,7 @@ export default function HomeScreen({ navigation, route }) {
                     <ScrollView horizontal={true}>
                         {Data.services.map((item, index) => {
                             return (
-                                <View key={index} style={containers.ServiceItemContainer}
+                                <View key={index} style={[containers.ServiceItemContainer, { marginLeft: index == 0 ? 20 : 10 }]}
 
                                 >
                                     <Image source={{ uri: item.image }} style={{ width: 50, height: 50, marginBottom: 20 }} />
