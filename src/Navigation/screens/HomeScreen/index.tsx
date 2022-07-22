@@ -95,11 +95,12 @@ export default function HomeScreen({ navigation, route }) {
                         })}
                     </ScrollView>
                 </View>
+                <Text style={[styles.companyprofileText, { marginHorizontal: 20 }]}>{Data.about}</Text>
             </View>
 
             <View style={containers.companyProfileContainer}>
 
-                <Text style={styles.companyprofileText}>{Data.about}</Text>
+
                 <View>
                     <Text style={styles.eventText}>Our Leaders</Text>
                     <View style={containers.MemebersContainer}>
@@ -177,6 +178,7 @@ export default function HomeScreen({ navigation, route }) {
                         })}
                     </View>
                 </View>
+                <Text style={styles.companyprofileText}>{Data.more}</Text>
                 <TouchableOpacity style={containers.requestContainer} onPress={() => {
                     QuoteFormRef.current?.open();
                 }}>
