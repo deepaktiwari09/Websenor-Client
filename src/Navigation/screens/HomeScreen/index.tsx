@@ -187,49 +187,6 @@ export default function HomeScreen({ navigation, route }) {
                     <Image source={require('../../../assets/images/RightArrow.png')} style={containers.requestImage} />
                 </TouchableOpacity>
             </View>
-            <View style={containers.JobsContainer}>
-                <Text style={styles.jobtitle}>Jobs at Websenor</Text>
-                <View style={containers.JobsScrollContainer}>
-                    <ScrollView horizontal={true}>
-                        {Data.jobs.map((item, index) => {
-                            return (
-                                <View key={index} style={[containers.JobsItemContainer, { marginLeft: (index === 0 ? 20 : 0) }]}
-                                >
-                                    <Image source={{ uri: item.image }} style={{ width: 50, height: 50 }} />
-                                    <View>
-                                        <Text style={styles.jobsitemtext}>{item.title}</Text>
-
-                                        <Text style={styles.jobsitemtext}>{item.date}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row', alignItems: 'center', width: '100%', justifyContent: 'space-between', paddingHorizontal: 40 }}>
-
-                                        <TouchableOpacity style={[containers.ApplyButtonContainer, {
-                                            marginRight: 15
-                                        }]}
-                                            onPress={() => {
-                                                setCurrentjobindex(index);
-                                                VaccancyFormRef.current?.open();
-                                            }}
-                                        >
-                                            <Text style={styles.ApplyButtontext}>Apply</Text>
-                                        </TouchableOpacity>
-                                        <TouchableOpacity style={{}}
-                                            onPress={() => {
-                                                setCurrentjobindex(index);
-                                                // VaccancyFormRef.current?.open();
-                                                setisjobdetails(true);
-                                            }}
-                                        >
-                                            <Text style={[styles.ApplyButtontext, { color: colors.Primary, marginTop: 5 }]}>Details</Text>
-                                        </TouchableOpacity>
-                                    </View>
-
-                                </View>
-                            )
-                        })}
-                    </ScrollView>
-                </View>
-            </View>
             <View style={containers.PortfolioContainer}>
 
                 <Text style={styles.servicetitle}>Our Portfolio</Text>
@@ -286,6 +243,50 @@ export default function HomeScreen({ navigation, route }) {
                     </View>
                 </Modal>
             </View>
+            <View style={containers.JobsContainer}>
+                <Text style={styles.jobtitle}>Jobs at Websenor</Text>
+                <View style={containers.JobsScrollContainer}>
+                    <ScrollView horizontal={true}>
+                        {Data.jobs.map((item, index) => {
+                            return (
+                                <View key={index} style={[containers.JobsItemContainer, { marginLeft: (index === 0 ? 20 : 0) }]}
+                                >
+                                    <Image source={{ uri: item.image }} style={{ width: 50, height: 50 }} />
+                                    <View>
+                                        <Text style={styles.jobsitemtext}>{item.title}</Text>
+
+                                        <Text style={styles.jobsitemtext}>{item.date}</Text>
+                                    </View>
+                                    <View style={{ flexDirection: 'row', alignItems: 'center', width: '100%', justifyContent: 'space-between', paddingHorizontal: 40 }}>
+
+                                        <TouchableOpacity style={[containers.ApplyButtonContainer, {
+                                            marginRight: 15
+                                        }]}
+                                            onPress={() => {
+                                                setCurrentjobindex(index);
+                                                VaccancyFormRef.current?.open();
+                                            }}
+                                        >
+                                            <Text style={styles.ApplyButtontext}>Apply</Text>
+                                        </TouchableOpacity>
+                                        <TouchableOpacity style={{}}
+                                            onPress={() => {
+                                                setCurrentjobindex(index);
+                                                // VaccancyFormRef.current?.open();
+                                                setisjobdetails(true);
+                                            }}
+                                        >
+                                            <Text style={[styles.ApplyButtontext, { color: colors.Primary, marginTop: 5 }]}>Details</Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                </View>
+                            )
+                        })}
+                    </ScrollView>
+                </View>
+            </View>
+
             <View style={containers.FooterContainer}>
                 <Text style={styles.fotterheadertext}>Websenor PVT. LTD</Text>
                 <Text style={styles.fottertext}>All @copyright reserved by websenor from 1990 to 2022.</Text>

@@ -88,7 +88,7 @@ export const createContainers = (colors: Color) => StyleSheet.create({
     },
     JobsContainer: {
         // paddingLeft: 20,
-        marginVertical: 30
+        marginTop: 30
     },
     JobsScrollContainer: {
         // paddingLeft: 20
@@ -138,7 +138,7 @@ export const createContainers = (colors: Color) => StyleSheet.create({
         height: 50,
     },
     PortfolioContainer: {
-
+        marginTop: 30,
     },
     PortfolioItemContainer: {
         height: 250,
@@ -171,7 +171,8 @@ export const createContainers = (colors: Color) => StyleSheet.create({
         paddingVertical: 20,
     },
     FooterContainer: {
-        marginVertical: 40,
+        marginTop: 10,
+        marginBottom: 40,
         // borderTopColor: 'rgba(51,51,51,.3)',
         // borderTopWidth: 1,
         // borderStyle: 'solid',
