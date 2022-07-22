@@ -1,7 +1,7 @@
 {
     "name": "WebSenor",
     "website": "",
-    "about": "WebSenor – An IT company based in India, divided in USA, UK, Kuwait & India. We deliver the art services of IT & ITES to the global market and also deal in Website design & Development, Software development, Mobile Applications development, Remote Employee & Digital Marketing services.The firm was established in 2010 and was revised as WebSenor in 2013. Our founder Mr Shubham Soni started this company with a strong ideology to serve the high quality services and products to SMEs.",
+    "about": "WebSenor – An IT company based in India, divided in USA, UK, Kuwait & India. We deliver the art services of IT & ITES to the global market and also deal in Website design & Development, Software development, Mobile Applications development, Remote Employee & Digital Marketing services.The firm was established in 2010 and was revised as WebSenor in 2013. Our founder Mr Shubham Soni started this company with a strong ideology to serve the high quality services and products to SMEs. you can not only choose from the various packages we have to offer you, but we can also give you a web design proposal that will surely fit the budget that you specify.",
     "more": "Our professional web designers and team of developers will help you to find the best options for you. Our vision lies in satisfying all your web development needs so that your company gets the identity it deserves in the corporate and internet world. To help you create a website that you are comfortable with, you can not only choose from the various packages we have to offer you, but we can also give you a web design proposal that will surely fit the budget that you specify.",
     "members": [
         {
@@ -48,6 +48,72 @@
             "name": "Abhishek Soni",
             "position": "Accounts",
             "image": "https://i0.wp.com/websenor.com/wp-content/uploads/2021/10/20180513064959_IMG_6751_Original-e1635174279253.jpg?fit=500%2C640&ssl=1"
+        }
+    ],
+    "portfolio": [
+        {
+            "name": "Nalbes",
+            "images": [
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/05/Artboard-1-8.png?fit=1600%2C1134&ssl=1",
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/05/Artboard-2-7.png?fit=1600%2C1134&ssl=1"
+            ],
+            "description": "Nalbes brings a unique combination of middle eastern and world famous brands. Covering everything form women’s fashion, men’s fashion, kids, accessories, beauty products, home, activewear and much more.This app is developed for the purpose of temperature calculation. By using this app you can calculate thermocouple Temperature. This temperature calculator allows you to calculate multiple values according to different different thermocouple types."
+        },
+        {
+            "name": "Duggila",
+            "images": [
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/05/Artboard-2-33.png?fit=1600%2C1134&ssl=1",
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/05/Artboard-1-32.png?fit=1600%2C1134&ssl=1"
+            ],
+            "description": "Find your friends, share photos, videos, text, Creating social community & everything."
+        },
+        {
+            "name": "Posh",
+            "images": [
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/05/Artboard-2-34.png?fit=1600%2C1134&ssl=1",
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/05/Artboard-1-4-1.png?fit=1600%2C1134&ssl=1"
+            ],
+            "description": "Shop for Women’s Stylish Shoes and  Accessories in India. Buy latest range of Women Shoes and Shoe Accessories at POSH."
+        },
+        {
+            "name": "Cosmic",
+            "images": [
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/05/Artboard-1-3-2.png?fit=1600%2C1134&ssl=1",
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/05/Artboard-2-2-1.png?fit=1600%2C1134&ssl=1"
+            ],
+            "description": "Cosmic is an American photo and video sharing social networking service The app allows users to upload media that can be edited with filters and organized by hashtags and geographical tagging."
+        },
+        {
+            "name": "FUBBR",
+            "images": [
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/05/Artboard-1-3-1.png?fit=1600%2C1134&ssl=1",
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/05/Artboard-2-3-1.png?fit=1600%2C1134&ssl=1"
+            ],
+            "description": "FUBBR is a social media app used for posting or sharing images, videos, with order people on the server."
+        },
+        {
+            "name": "Anchal Credit",
+            "images": [
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/05/Artboard-1-28.png?fit=1600%2C1134&ssl=1",
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/05/Artboard-2-29.png?fit=1600%2C1134&ssl=1"
+            ],
+            "description": "ANCHAL CREDIT app is Credit Human mobile banking appLog in using your online banking user ID and password or enroll within the app. You will need an email address associated with your account to enroll for the first time."
+        },
+        {
+            "name": "PeClick",
+            "images": [
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/05/Artboard-1-2-1.png?fit=1600%2C1134&ssl=1",
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/05/Artboard-2-1-1.png?fit=1600%2C1134&ssl=1"
+            ],
+            "description": "PeClick seller app to your business online. Main features of the app are Move your shop to cloud and manage your orders, billing and customer information in your personalized CRM Resolve your issues with our extensive experienced developers and designers."
+        },
+        {
+            "name": "Warriors Zon",
+            "images": [
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/03/Warrior-zon-Banner-1.png?fit=800%2C567&ssl=1",
+                "https://i0.wp.com/websenor.com/wp-content/uploads/2022/03/Warrior-zon-Banner-2.png?fit=800%2C567&ssl=1"
+            ],
+            "description": "Play singleplayer or online with friends or strangers in this anime fighting game. Fight with anime characters from many classes such as dragon warriors, shinobi ninjas, shinigamis and super heroes.You can also create your own anime characters and transformations in the custom character creation mode. Modify your characters look, skills, combos and a lot more options of customization."
         }
     ],
     "locations": [

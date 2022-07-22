@@ -33,6 +33,8 @@ export default function HomeScreen({ navigation, route }) {
 
     const [currentjobindex, setCurrentjobindex] = useState(0);
     const [isjobdetails, setisjobdetails] = useState(false);
+    const [currentportfolioindex, setCurrentportfolioindex] = useState(0);
+    const [isportfolio, setisportfolio] = useState(false);
 
     return (
         <ScrollView style={containers.main}>
@@ -70,7 +72,6 @@ export default function HomeScreen({ navigation, route }) {
 
                 />
             </View>
-
             <View style={containers.ServicesContainer}>
                 <Text style={styles.servicetitle}>Our Services</Text>
                 <View style={containers.ServicesScrollContainer}>
@@ -86,20 +87,20 @@ export default function HomeScreen({ navigation, route }) {
                                         onPress={() => {
                                             // setCurrentjobindex(index);
                                             // VaccancyFormRef.current?.open();
+                                            QuoteFormRef.current?.open();
                                         }}
                                     >
-                                        <Text style={[styles.ApplyButtontext, { color: colors.Primary, marginTop: 5 }]}>Details</Text>
+                                        <Text style={[styles.ApplyButtontext, { color: colors.Primary, marginTop: 5 }]}>Enquiry</Text>
                                     </TouchableOpacity>
                                 </View>
                             )
                         })}
                     </ScrollView>
                 </View>
-                <Text style={[styles.companyprofileText, { marginHorizontal: 20 }]}>{Data.about}</Text>
+                {/* <Text style={[styles.companyprofileText, { marginHorizontal: 20 }]}>{Data.about}</Text> */}
             </View>
 
             <View style={containers.companyProfileContainer}>
-
 
                 <View>
                     <Text style={styles.eventText}>Our Leaders</Text>
@@ -228,6 +229,77 @@ export default function HomeScreen({ navigation, route }) {
                         })}
                     </ScrollView>
                 </View>
+            </View>
+            <View style={containers.PortfolioContainer}>
+
+                <Text style={styles.servicetitle}>Our Portfolio</Text>
+                <View style={containers.ServicesScrollContainer}>
+                    <ScrollView horizontal={false} >
+                        <View style={{ alignItems: 'center' }}>
+                            {Data.portfolio.map((item, index) => {
+                                return (
+                                    <Pressable key={index} style={containers.PortfolioItemContainer}
+                                        onPress={() => { setisportfolio(true); setCurrentportfolioindex(index); }}
+                                    >
+                                        <SwiperFlatList
+                                            style={containers.portfolioImages}
+                                            data={item.images}
+                                            renderItem={({ item }) => {
+                                                return (
+                                                    <Image source={{ uri: item }} style={containers.portfolioImages} />
+                                                )
+                                            }}
+                                            autoplay
+                                            autoplayDelay={8}
+                                            autoplayLoop
+
+                                        />
+                                        <View>
+                                            <Text style={styles.portfolioitemtext}>{item.name}</Text>
+                                        </View>
+
+                                    </Pressable>
+                                )
+                            })}
+
+                        </View>
+                    </ScrollView>
+                </View>
+                <Modal isVisible={isportfolio}>
+                    <View style={containers.PortfolioModalContainer}>
+                        <SwiperFlatList
+                            style={containers.portfolioModelImages}
+                            data={Data.portfolio[currentportfolioindex].images}
+                            renderItem={({ item }) => {
+                                return (
+                                    <View style={{ position: "relative" }}>
+                                        <Image source={{ uri: item }} style={containers.portfolioModelImages} />
+                                        <Pressable onPress={() => {
+                                            setisportfolio(false);
+                                        }}
+                                            style={{ position: "absolute", top: 10, right: 10 }}
+                                        >
+                                            <Image source={require('../../../assets/images/close.png')} style={{ width: 25, height: 25 }} />
+                                        </Pressable>
+
+                                    </View>
+                                )
+                            }}
+                            autoplay
+                            autoplayDelay={3}
+                            autoplayLoop
+
+                        />
+                        <View style={containers.PortfolioModaldetailsContainer}>
+                            <Text style={styles.portfoliomodeltext}>{Data.portfolio[currentportfolioindex].name}</Text>
+                            <Text style={styles.portfoliomodeldescription}>{Data.portfolio[currentportfolioindex].description}</Text>
+                        </View>
+                    </View>
+                </Modal>
+            </View>
+            <View style={containers.FooterContainer}>
+                <Text style={styles.fotterheadertext}>Websenor PVT. LTD</Text>
+                <Text style={styles.fottertext}>All @copyright reserved by websenor from 1990 to 2022.</Text>
             </View>
             <RBSheet
                 ref={locationRef}

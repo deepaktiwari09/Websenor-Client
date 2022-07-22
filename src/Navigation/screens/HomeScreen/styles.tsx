@@ -16,7 +16,8 @@ export const createContainers = (colors: Color) => StyleSheet.create({
         paddingVertical: 20,
     },
     companyProfileContainer: {
-        paddingHorizontal: 20
+        paddingHorizontal: 20,
+        marginVertical: 12
     },
     requestContainer: {
         backgroundColor: colors.Secondry,
@@ -43,7 +44,7 @@ export const createContainers = (colors: Color) => StyleSheet.create({
     },
     ServicesContainer: {
         // paddingLeft: 20,
-        marginVertical: 30
+        marginTop: 30
     },
     ServicesScrollContainer: {
 
@@ -135,6 +136,47 @@ export const createContainers = (colors: Color) => StyleSheet.create({
         width: 50,
         borderRadius: 25,
         height: 50,
+    },
+    PortfolioContainer: {
+
+    },
+    PortfolioItemContainer: {
+        height: 250,
+        width: width - 40,
+        backgroundColor: 'white',
+        elevation: 3,
+        borderRadius: 10,
+        marginVertical: 10,
+        marginHorizontal: 10,
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        paddingVertical: 10,
+    },
+    portfolioImages: {
+        width: width - 40,
+        height: 200
+    },
+    PortfolioModalContainer: {
+        // flex: 1,
+        backgroundColor: 'white',
+        borderRadius: 20
+    },
+    portfolioModelImages: {
+        width: width - 40,
+        height: 200,
+        borderRadius: 20
+    },
+    PortfolioModaldetailsContainer: {
+        paddingHorizontal: 20,
+        paddingVertical: 20,
+    },
+    FooterContainer: {
+        marginVertical: 40,
+        // borderTopColor: 'rgba(51,51,51,.3)',
+        // borderTopWidth: 1,
+        // borderStyle: 'solid',
+        paddingVertical: 30,
+        paddingHorizontal: 20
     }
 
 })
@@ -275,6 +317,39 @@ export const createStyles = (colors: Color, font: Font) => StyleSheet.create({
         color: colors.Text,
         fontFamily: font.Primary,
         fontWeight: 'bold',
+    },
+    portfolioitemtext: {
+        fontFamily: font.Primary,
+        fontSize: width * font.sm,
+        color: colors.Text,
+        fontWeight: 'bold',
+    },
+    portfoliomodeltext: {
+        fontFamily: font.Primary,
+        fontSize: width * font.md,
+        color: colors.Text,
+        fontWeight: 'bold',
+    },
+    portfoliomodeldescription: {
+        fontFamily: font.Primary,
+        fontSize: width * (font.xs + 0.005),
+        color: colors.Text,
+        marginVertical: 10
+        // fontWeight: 'bold',
+    },
+    fotterheadertext: {
+        fontSize: width * font.md,
+        // textAlign: 'center',
+        color: 'rgba(51,51,51,.5)',
+        fontFamily: font.Primary,
+        fontWeight: 'bold',
+    },
+    fottertext: {
+        fontSize: width * font.xs,
+        // textAlign: 'center',
+        color: 'rgba(51,51,51,.5)',
+        fontFamily: font.Primary,
+        // fontWeight: 'bold',
     }
 })
 
