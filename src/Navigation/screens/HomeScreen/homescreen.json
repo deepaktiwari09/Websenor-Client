@@ -33,43 +33,218 @@
             "title": "React Native Developer",
             "image": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
             "date": "21 July 2022",
-            "vaccancies": "12"
+            "vaccancies": "12",
+            "jobtype": "Full Time",
+            "location": "Udaipur, India",
+            "Responsibilities": [
+                "Manage campaign expenses, staying on budget, estimating monthly costs, and reconciling discrepancies.",
+                "Optimize copy and landing pages for search engine marketing",
+                "Perform ongoing keyword discovery, expansion and optimization",
+                "Research and implement search engine optimization recommendations",
+                "Research and analyze competitor advertising links",
+                "Develop and implement link building strategy",
+                "Work with the development team to ensure SEO best practices are properly implemented on newly developed code",
+                "Work with editorial and marketing teams to drive SEO in content creation and content programming",
+                "Recommend changes to website architecture, content, linking and other factors to improve SEO positions for target keywords."
+            ],
+            "Requirements": [
+                "Proven SEO experience",
+                "Proven SEM experience managing PPC campaigns across Google, Yahoo and Bing.",
+                "Solid understanding of performance marketing, conversion, and online customer acquisition",
+                "In-depth experience with website analytics tools (e.g, Google Analytics, NetInsight, Omniture, WebTrends)",
+                "Experience with bid management tools (e.g., Click Equations, Marin, Kenshoo, Search Ignite)",
+                "Experience with A/B and multivariate experiments",
+                "Working knowledge of HTML, CSS, and JavaScript development and constraints",
+                "Knowledge of ranking factors and search engine algorithms",
+                "Up-to-date with the latest trends and best practices in SEO and SEM",
+                "BS/MS degree in a quantitative, test-driven field"
+            ]
         },
         {
             "title": "Flutter Developer",
             "image": "https://www.softuvo.com/assets/font-end/images/Flutter.png",
             "date": "8 July 2022",
-            "vaccancies": "4"
+            "vaccancies": "4",
+            "jobtype": "Full Time",
+            "location": "Udaipur, India",
+            "Responsibilities": [
+                "Manage campaign expenses, staying on budget, estimating monthly costs, and reconciling discrepancies.",
+                "Optimize copy and landing pages for search engine marketing",
+                "Perform ongoing keyword discovery, expansion and optimization",
+                "Research and implement search engine optimization recommendations",
+                "Research and analyze competitor advertising links",
+                "Develop and implement link building strategy",
+                "Work with the development team to ensure SEO best practices are properly implemented on newly developed code",
+                "Work with editorial and marketing teams to drive SEO in content creation and content programming",
+                "Recommend changes to website architecture, content, linking and other factors to improve SEO positions for target keywords."
+            ],
+            "Requirements": [
+                "Proven SEO experience",
+                "Proven SEM experience managing PPC campaigns across Google, Yahoo and Bing.",
+                "Solid understanding of performance marketing, conversion, and online customer acquisition",
+                "In-depth experience with website analytics tools (e.g, Google Analytics, NetInsight, Omniture, WebTrends)",
+                "Experience with bid management tools (e.g., Click Equations, Marin, Kenshoo, Search Ignite)",
+                "Experience with A/B and multivariate experiments",
+                "Working knowledge of HTML, CSS, and JavaScript development and constraints",
+                "Knowledge of ranking factors and search engine algorithms",
+                "Up-to-date with the latest trends and best practices in SEO and SEM",
+                "BS/MS degree in a quantitative, test-driven field"
+            ]
         },
         {
             "title": "Laravel Developer",
             "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png",
             "date": "18 June 2022",
-            "vaccancies": "4"
+            "vaccancies": "4",
+            "jobtype": "Full Time",
+            "location": "Udaipur, India",
+            "Responsibilities": [
+                "Manage campaign expenses, staying on budget, estimating monthly costs, and reconciling discrepancies.",
+                "Optimize copy and landing pages for search engine marketing",
+                "Perform ongoing keyword discovery, expansion and optimization",
+                "Research and implement search engine optimization recommendations",
+                "Research and analyze competitor advertising links",
+                "Develop and implement link building strategy",
+                "Work with the development team to ensure SEO best practices are properly implemented on newly developed code",
+                "Work with editorial and marketing teams to drive SEO in content creation and content programming",
+                "Recommend changes to website architecture, content, linking and other factors to improve SEO positions for target keywords."
+            ],
+            "Requirements": [
+                "Proven SEO experience",
+                "Proven SEM experience managing PPC campaigns across Google, Yahoo and Bing.",
+                "Solid understanding of performance marketing, conversion, and online customer acquisition",
+                "In-depth experience with website analytics tools (e.g, Google Analytics, NetInsight, Omniture, WebTrends)",
+                "Experience with bid management tools (e.g., Click Equations, Marin, Kenshoo, Search Ignite)",
+                "Experience with A/B and multivariate experiments",
+                "Working knowledge of HTML, CSS, and JavaScript development and constraints",
+                "Knowledge of ranking factors and search engine algorithms",
+                "Up-to-date with the latest trends and best practices in SEO and SEM",
+                "BS/MS degree in a quantitative, test-driven field"
+            ]
         },
         {
             "title": "Software Tester",
             "image": "https://seeklogo.com/images/J/jest-logo-F9901EBBF7-seeklogo.com.png",
             "date": "12 June 2022",
-            "vaccancies": "4"
+            "vaccancies": "4",
+            "jobtype": "Full Time",
+            "location": "Udaipur, India",
+            "Responsibilities": [
+                "Manage campaign expenses, staying on budget, estimating monthly costs, and reconciling discrepancies.",
+                "Optimize copy and landing pages for search engine marketing",
+                "Perform ongoing keyword discovery, expansion and optimization",
+                "Research and implement search engine optimization recommendations",
+                "Research and analyze competitor advertising links",
+                "Develop and implement link building strategy",
+                "Work with the development team to ensure SEO best practices are properly implemented on newly developed code",
+                "Work with editorial and marketing teams to drive SEO in content creation and content programming",
+                "Recommend changes to website architecture, content, linking and other factors to improve SEO positions for target keywords."
+            ],
+            "Requirements": [
+                "Proven SEO experience",
+                "Proven SEM experience managing PPC campaigns across Google, Yahoo and Bing.",
+                "Solid understanding of performance marketing, conversion, and online customer acquisition",
+                "In-depth experience with website analytics tools (e.g, Google Analytics, NetInsight, Omniture, WebTrends)",
+                "Experience with bid management tools (e.g., Click Equations, Marin, Kenshoo, Search Ignite)",
+                "Experience with A/B and multivariate experiments",
+                "Working knowledge of HTML, CSS, and JavaScript development and constraints",
+                "Knowledge of ranking factors and search engine algorithms",
+                "Up-to-date with the latest trends and best practices in SEO and SEM",
+                "BS/MS degree in a quantitative, test-driven field"
+            ]
         },
         {
             "title": "Next.js Developer",
             "image": "https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png",
             "date": "8 June 2022",
-            "vaccancies": "2"
+            "vaccancies": "2",
+            "jobtype": "Full Time",
+            "location": "Udaipur, India",
+            "Responsibilities": [
+                "Manage campaign expenses, staying on budget, estimating monthly costs, and reconciling discrepancies.",
+                "Optimize copy and landing pages for search engine marketing",
+                "Perform ongoing keyword discovery, expansion and optimization",
+                "Research and implement search engine optimization recommendations",
+                "Research and analyze competitor advertising links",
+                "Develop and implement link building strategy",
+                "Work with the development team to ensure SEO best practices are properly implemented on newly developed code",
+                "Work with editorial and marketing teams to drive SEO in content creation and content programming",
+                "Recommend changes to website architecture, content, linking and other factors to improve SEO positions for target keywords."
+            ],
+            "Requirements": [
+                "Proven SEO experience",
+                "Proven SEM experience managing PPC campaigns across Google, Yahoo and Bing.",
+                "Solid understanding of performance marketing, conversion, and online customer acquisition",
+                "In-depth experience with website analytics tools (e.g, Google Analytics, NetInsight, Omniture, WebTrends)",
+                "Experience with bid management tools (e.g., Click Equations, Marin, Kenshoo, Search Ignite)",
+                "Experience with A/B and multivariate experiments",
+                "Working knowledge of HTML, CSS, and JavaScript development and constraints",
+                "Knowledge of ranking factors and search engine algorithms",
+                "Up-to-date with the latest trends and best practices in SEO and SEM",
+                "BS/MS degree in a quantitative, test-driven field"
+            ]
         },
         {
             "title": "Frontend Developer",
             "image": "https://icon-library.com/images/web-development-icon-png/web-development-icon-png-10.jpg",
             "date": "2 June 2022",
-            "vaccancies": "2"
+            "vaccancies": "2",
+            "jobtype": "Full Time",
+            "location": "Udaipur, India",
+            "Responsibilities": [
+                "Manage campaign expenses, staying on budget, estimating monthly costs, and reconciling discrepancies.",
+                "Optimize copy and landing pages for search engine marketing",
+                "Perform ongoing keyword discovery, expansion and optimization",
+                "Research and implement search engine optimization recommendations",
+                "Research and analyze competitor advertising links",
+                "Develop and implement link building strategy",
+                "Work with the development team to ensure SEO best practices are properly implemented on newly developed code",
+                "Work with editorial and marketing teams to drive SEO in content creation and content programming",
+                "Recommend changes to website architecture, content, linking and other factors to improve SEO positions for target keywords."
+            ],
+            "Requirements": [
+                "Proven SEO experience",
+                "Proven SEM experience managing PPC campaigns across Google, Yahoo and Bing.",
+                "Solid understanding of performance marketing, conversion, and online customer acquisition",
+                "In-depth experience with website analytics tools (e.g, Google Analytics, NetInsight, Omniture, WebTrends)",
+                "Experience with bid management tools (e.g., Click Equations, Marin, Kenshoo, Search Ignite)",
+                "Experience with A/B and multivariate experiments",
+                "Working knowledge of HTML, CSS, and JavaScript development and constraints",
+                "Knowledge of ranking factors and search engine algorithms",
+                "Up-to-date with the latest trends and best practices in SEO and SEM",
+                "BS/MS degree in a quantitative, test-driven field"
+            ]
         },
         {
             "title": "UI/UX Designer",
             "image": "https://static.vecteezy.com/system/resources/thumbnails/002/162/778/small/ux-working-process-team-free-vector.jpg",
             "date": "22 May 2022",
-            "vaccancies": "2"
+            "vaccancies": "2",
+            "jobtype": "Full Time",
+            "location": "Udaipur, India",
+            "Responsibilities": [
+                "Manage campaign expenses, staying on budget, estimating monthly costs, and reconciling discrepancies.",
+                "Optimize copy and landing pages for search engine marketing",
+                "Perform ongoing keyword discovery, expansion and optimization",
+                "Research and implement search engine optimization recommendations",
+                "Research and analyze competitor advertising links",
+                "Develop and implement link building strategy",
+                "Work with the development team to ensure SEO best practices are properly implemented on newly developed code",
+                "Work with editorial and marketing teams to drive SEO in content creation and content programming",
+                "Recommend changes to website architecture, content, linking and other factors to improve SEO positions for target keywords."
+            ],
+            "Requirements": [
+                "Proven SEO experience",
+                "Proven SEM experience managing PPC campaigns across Google, Yahoo and Bing.",
+                "Solid understanding of performance marketing, conversion, and online customer acquisition",
+                "In-depth experience with website analytics tools (e.g, Google Analytics, NetInsight, Omniture, WebTrends)",
+                "Experience with bid management tools (e.g., Click Equations, Marin, Kenshoo, Search Ignite)",
+                "Experience with A/B and multivariate experiments",
+                "Working knowledge of HTML, CSS, and JavaScript development and constraints",
+                "Knowledge of ranking factors and search engine algorithms",
+                "Up-to-date with the latest trends and best practices in SEO and SEM",
+                "BS/MS degree in a quantitative, test-driven field"
+            ]
         }
     ],
     "events": [

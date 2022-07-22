@@ -216,7 +216,29 @@ export const createStyles = (colors: Color, font: Font) => StyleSheet.create({
         fontFamily: font.Primary,
         color: colors.OnPrimary,
         fontWeight: 'bold',
-    }
+    },
+    joblabletext: {
+        color: colors.Text,
+        fontSize: width * (font.xs + 0.008),
+        fontFamily: font.Primary,
+        fontWeight: 'bold',
+    },
+    jobdetailstext: {
+        color: colors.Text,
+        fontSize: width * font.xs,
+        fontFamily: font.Primary,
 
+        // textAlign: 'center',
+    },
+    JobModelHeader: {
+        color: colors.Secondry,
+        fontFamily: font.Primary, fontSize: width * font.md,
+        fontWeight: 'bold',
+    },
+    aaplyjobHeader: {
+        color: colors.Text,
+        fontFamily: font.Primary, fontSize: width * font.md,
+        fontWeight: 'bold',
+    }
 })
 

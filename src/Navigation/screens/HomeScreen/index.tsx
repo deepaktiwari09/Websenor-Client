@@ -130,7 +130,7 @@ export default function HomeScreen({ navigation, route }) {
                                         </TouchableOpacity>
                                         <TouchableOpacity style={{}}
                                             onPress={() => {
-                                                // setCurrentjobindex(index);
+                                                setCurrentjobindex(index);
                                                 // VaccancyFormRef.current?.open();
                                                 setisjobdetails(true);
                                             }}
@@ -193,12 +193,11 @@ export default function HomeScreen({ navigation, route }) {
                     <View style={containers.QuoteHeaderContainer}>
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                             <Image source={{ uri: Data.jobs[currentjobindex].image }} style={{ width: 30, height: 30 }} />
-                            {/* <Text style={[styles.QuoteHeaderText, { marginLeft: 10 }]}>Vaccancy Form</Text> */}
+                            <Text style={[styles.aaplyjobHeader, { marginLeft: 10 }]}>Vaccancy Form</Text>
 
                         </View>
                         <Pressable onPress={() => {
                             VaccancyFormRef.current?.close();
-
                         }}>
                             <Image source={require('../../../assets/images/close.png')} style={{ width: 25, height: 25 }} />
                         </Pressable>
@@ -211,16 +210,39 @@ export default function HomeScreen({ navigation, route }) {
                 isVisible={isjobdetails}
             // hasBackdrop={true}
             >
-                <View style={{ flex: 1, paddingHorizontal: 10, paddingVertical: 40 }}>
-                    <View style={{ flex: 1, borderRadius: 10, backgroundColor: 'white' }}>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, paddingVertical: 20 }}>
-                            <Text>I am the modal content!</Text>
+                <View style={{ flex: 1, paddingVertical: 20 }}>
+                    <View style={{ flex: 1, borderRadius: 10, backgroundColor: 'white', paddingHorizontal: 20 }}>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 20 }}>
+                            <Text style={styles.JobModelHeader}>{location}</Text>
                             <Pressable onPress={() => {
                                 setisjobdetails(false);
                             }}>
                                 <Image source={require('../../../assets/images/close.png')} style={{ width: 25, height: 25 }} />
                             </Pressable>
                         </View>
+                        <ScrollView>
+                            <Text style={styles.joblabletext}>{Data.jobs[currentjobindex].title}</Text>
+                            <Text style={styles.joblabletext}>Time:- {Data.jobs[currentjobindex].jobtype}</Text>
+                            <Text style={styles.joblabletext}>Total Vaccancy:- {Data.jobs[currentjobindex].vaccancies}</Text>
+                            <View style={{ marginVertical: 15 }}>
+
+                                <Text style={styles.joblabletext}>Responsibilities</Text>
+                                {Data.jobs[currentjobindex].Responsibilities.map((item, index) => {
+                                    return (
+                                        <Text style={styles.jobdetailstext} key={index}>{item}</Text>
+                                    )
+                                })}
+                            </View>
+                            <View style={{ marginVertical: 5 }}>
+                                <Text style={styles.joblabletext}>Requirements</Text>
+                                {Data.jobs[currentjobindex].Requirements.map((item, index) => {
+                                    return (
+                                        <Text style={styles.jobdetailstext} key={index}>{item}</Text>
+                                    )
+                                })}
+                            </View>
+                            <View style={{ paddingVertical: 30 }}></View>
+                        </ScrollView>
                     </View>
                 </View>
             </Modal>
