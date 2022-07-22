@@ -115,6 +115,27 @@ export const createContainers = (colors: Color) => StyleSheet.create({
         marginTop: 10
 
     },
+    MemebersContainer: {
+        paddingHorizontal: 20,
+        paddingVertical: 20,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+    },
+    memberitemContainer: {
+        // height: 50,
+        // width: 50,
+        // borderRadius: 25,
+        justifyContent: 'center',
+        // alignItems: 'center',
+    },
+    memberImage: {
+        elevation: 4,
+        width: 50,
+        borderRadius: 25,
+        height: 50,
+    }
 
 })
 
@@ -239,6 +260,20 @@ export const createStyles = (colors: Color, font: Font) => StyleSheet.create({
     aaplyjobHeader: {
         color: colors.Text,
         fontFamily: font.Primary, fontSize: width * font.md,
+        fontWeight: 'bold',
+    },
+    membernametext: {
+        fontSize: width * font.md,
+        textAlign: 'center',
+        color: colors.Text,
+        fontFamily: font.Primary,
+        // fontWeight: 'bold',
+    },
+    memberpositiontext: {
+        fontSize: width * font.xs,
+        textAlign: 'center',
+        color: colors.Text,
+        fontFamily: font.Primary,
         fontWeight: 'bold',
     }
 })

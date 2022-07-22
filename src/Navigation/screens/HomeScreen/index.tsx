@@ -16,6 +16,9 @@ import Modal from "react-native-modal";
 import RequestForm from '../../../Components/RequestForm';
 import VaccancyForm from '../../../Components/VaccancyForm';
 
+const { width, height } = Dimensions.get('window');
+
+
 export default function HomeScreen({ navigation, route }) {
 
     const { colors, fonts } = useSelector((state: RootState) => state.apperienceManager);
@@ -67,6 +70,7 @@ export default function HomeScreen({ navigation, route }) {
 
                 />
             </View>
+
             <View style={containers.ServicesContainer}>
                 <Text style={styles.servicetitle}>Our Services</Text>
                 <View style={containers.ServicesScrollContainer}>
@@ -92,9 +96,87 @@ export default function HomeScreen({ navigation, route }) {
                     </ScrollView>
                 </View>
             </View>
+
             <View style={containers.companyProfileContainer}>
 
                 <Text style={styles.companyprofileText}>{Data.about}</Text>
+                <View>
+                    <Text style={styles.eventText}>Our Leaders</Text>
+                    <View style={containers.MemebersContainer}>
+                        {Data.members.map((item, index) => {
+                            return (
+                                <View key={index} style={[,
+                                    (index == 0 ? {
+                                        flexDirection: 'row',
+                                        justifyContent: 'space-around',
+                                        width: '100%',
+                                        elevation: 2,
+                                        backgroundColor: '#fff',
+                                        paddingVertical: 15,
+                                        paddingRight: 15,
+                                        borderRadius: 20
+                                    } : {}),
+                                    (index == 1 || index == 2 ? {
+                                        // flexDirection: 'row',
+                                        justifyContent: 'space-around',
+                                        alignItems: 'center',
+                                        width: '48%',
+                                        elevation: 2,
+                                        backgroundColor: '#fff',
+                                        paddingVertical: 15,
+                                        borderRadius: 20,
+                                        marginVertical: 20
+                                    } : {}),
+                                    (index > 2 ? {
+                                        // flexDirection: 'row',
+                                        justifyContent: 'space-around',
+                                        alignItems: 'center',
+                                        width: width / 3 - 40,
+                                        elevation: 2,
+                                        backgroundColor: '#fff',
+                                        paddingVertical: 15,
+                                        borderRadius: 10,
+                                        marginVertical: 5
+                                    } : {}),
+                                ]}>
+                                    <Image source={{ uri: item.image }} style={[containers.memberImage,
+                                    (index == 0 ? {
+                                        height: 100,
+                                        width: 100,
+                                        marginHorizontal: 10,
+                                        marginVertical: 10,
+                                    } : {}),
+                                    (index == 1 || index == 2 ? {
+                                        height: 70,
+                                        width: 70,
+                                        marginHorizontal: 20,
+                                        marginVertical: 10,
+                                    } : {}),
+                                    (index > 2 ? {
+                                        height: 50,
+                                        width: 50,
+                                        marginHorizontal: 20,
+                                        marginVertical: 10,
+                                        borderRadius: 10
+                                    } : {}),
+                                    ]} />
+                                    <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                        <Text style={[styles.membernametext,
+                                        (index == 1 || index == 2 ? {
+                                            fontSize: width * fonts.sm,
+                                        } : {}),
+                                        (index > 2 ? {
+                                            fontSize: width * fonts.xs,
+                                        } : {}),
+                                        ]}>{item.name}</Text>
+                                        <Text style={styles.memberpositiontext}>{item.position}</Text>
+
+                                    </View>
+                                </View>
+                            )
+                        })}
+                    </View>
+                </View>
                 <TouchableOpacity style={containers.requestContainer} onPress={() => {
                     QuoteFormRef.current?.open();
                 }}>

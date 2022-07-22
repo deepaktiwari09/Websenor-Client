@@ -2,6 +2,53 @@
     "name": "WebSenor",
     "website": "",
     "about": "WebSenor – An IT company based in India, divided in USA, UK, Kuwait & India. We deliver the art services of IT & ITES to the global market and also deal in Website design & Development, Software development, Mobile Applications development, Remote Employee & Digital Marketing services.The firm was established in 2010 and was revised as WebSenor in 2013. Our founder Mr Shubham Soni started this company with a strong ideology to serve the high quality services and products to SMEs.",
+    "members": [
+        {
+            "name": "Shubham Soni",
+            "position": "Founder  &  CEO",
+            "image": "https://i0.wp.com/websenor.com/wp-content/uploads/2021/10/shubham-sir.png?w=319&ssl=1"
+        },
+        {
+            "name": "Brittani",
+            "position": "Design Officer",
+            "image": "https://i0.wp.com/websenor.com/wp-content/uploads/2021/10/Champagne_small.png?w=250&ssl=1"
+        },
+        {
+            "name": "Page Ollice",
+            "position": "Strategic Advisor",
+            "image": "https://i0.wp.com/websenor.com/wp-content/uploads/2021/10/image-067.jpg?w=250&ssl=1"
+        },
+        {
+            "name": "Vimal Purbia",
+            "position": "CTO",
+            "image": "https://i0.wp.com/websenor.com/wp-content/uploads/2021/10/vimal-sir-2.jpg?w=250&ssl=1"
+        },
+        {
+            "name": "Asif Khan",
+            "position": "COO",
+            "image": "https://i0.wp.com/websenor.com/wp-content/uploads/2021/10/asif-sir.jpg?w=250&ssl=1"
+        },
+        {
+            "name": "Vatsalya Soni",
+            "position": "CFO",
+            "image": "https://i0.wp.com/websenor.com/wp-content/uploads/2021/10/image-077.jpg?w=250&ssl=1"
+        },
+        {
+            "name": "Yash Shrimali",
+            "position": "HR",
+            "image": "https://i0.wp.com/websenor.com/wp-content/uploads/2021/10/yash-sir.png?w=250&ssl=1"
+        },
+        {
+            "name": "Virendra Bhati",
+            "position": "Marketing",
+            "image": "https://i0.wp.com/websenor.com/wp-content/uploads/2021/10/virendra-sir.png?w=250&ssl=1"
+        },
+        {
+            "name": "Abhishek Soni",
+            "position": "Accounts",
+            "image": "https://i0.wp.com/websenor.com/wp-content/uploads/2021/10/20180513064959_IMG_6751_Original-e1635174279253.jpg?fit=500%2C640&ssl=1"
+        }
+    ],
     "locations": [
         "Udaipur, India",
         "Ahamdabad, India",
