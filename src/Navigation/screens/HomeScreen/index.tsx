@@ -25,7 +25,7 @@ export default function HomeScreen({ navigation, route }) {
     const { location } = useSelector((state: RootState) => state.locationManager);
     const dispatch = useDispatch();
 
-    const styles = useMemo(() => createStyles(colors, fonts), [colors]);
+    const styles = useMemo(() => createStyles(colors, fonts), [colors, fonts]);
     const containers = useMemo(() => createContainers(colors), [colors]);
     const locationRef = useRef();
     const QuoteFormRef = useRef();
@@ -200,7 +200,8 @@ export default function HomeScreen({ navigation, route }) {
                                     >
                                         <Image source={{ uri: item.images[0] }} style={containers.portfolioImages} />
 
-                                        <View>
+                                        {/* <HelloWorld title={item.name} /> */}
+                                        <View style={{ paddingVertical: 10 }}>
                                             <Text style={styles.portfolioitemtext}>{item.name}</Text>
                                         </View>
 
@@ -291,6 +292,9 @@ export default function HomeScreen({ navigation, route }) {
                 <Text style={styles.fotterheadertext}>Websenor PVT. LTD</Text>
                 <Text style={styles.fottertext}>All @copyright reserved by websenor from 1990 to 2022.</Text>
             </View>
+
+
+
             <RBSheet
                 ref={locationRef}
                 height={Dimensions.get('window').height / 2}

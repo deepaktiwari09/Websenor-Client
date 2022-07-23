@@ -150,7 +150,7 @@ export const createContainers = (colors: Color) => StyleSheet.create({
         marginHorizontal: 10,
         alignItems: 'center',
         justifyContent: 'flex-end',
-        paddingVertical: 10,
+        // paddingVertical: 10,
     },
     portfolioImages: {
         width: width - 40,
@@ -182,175 +182,113 @@ export const createContainers = (colors: Color) => StyleSheet.create({
 
 })
 
-export const createStyles = (colors: Color, font: Font) => StyleSheet.create({
-    text: {
-        color: colors.Text,
 
-    },
-    logotext: {
-        fontSize: width * font.md,
-        textAlign: 'center',
-        fontFamily: font.Primary,
-        color: colors.Secondry,
-        fontWeight: 'bold'
-    },
-    locationtext: {
-        fontSize: width * font.md,
-        textAlign: 'center',
-        fontFamily: font.Primary,
-        color: colors.Text,
-    },
-    companyprofileText: {
-        fontSize: width * font.xs,
-        // textAlign: 'center',
-        marginVertical: 20,
-        fontFamily: font.Primary,
-        color: colors.Text,
-        // width: width * 0.6,
-    },
-    requestButtonText: {
-        fontSize: width * font.xs,
-        textAlign: 'center',
-        fontFamily: font.Primary,
-        color: colors.OnPrimary,
-        fontWeight: 'bold'
-    },
-    eventText: {
-        fontSize: width * font.sm,
-        // textAlign: 'center',
-        fontFamily: font.Primary,
-        color: colors.Text,
-        fontWeight: 'bold',
-        marginVertical: 10
-    },
-    servicetitle: {
-        fontSize: width * font.sm,
-        // textAlign: 'center',
-        fontFamily: font.Primary,
-        color: colors.Text,
-        fontWeight: 'bold',
-        marginVertical: 10,
-        marginLeft: 20
-    },
-    serviceitemtext: {
-        fontSize: width * font.xs,
-        textAlign: 'center',
-        fontFamily: font.Primary,
-        color: colors.Text,
-        fontWeight: 'bold',
-    },
-    QuoteHeaderText: {
-        fontSize: width * font.md,
-        textAlign: 'center',
-        fontFamily: font.Primary,
-        color: colors.Text,
-
-    },
-    locationslectionbuttonext: {
-        fontSize: width * 0.037,
-        // textAlign: 'center',
-        fontFamily: font.Primary,
-        color: colors.Text,
-        fontWeight: 'bold',
-    },
-    jobtitle: {
-        fontSize: width * font.sm,
-        // textAlign: 'center',
-        fontFamily: font.Primary,
-        color: colors.Text,
-        fontWeight: 'bold',
-        marginVertical: 10,
-        marginHorizontal: 20
-    },
-    jobsitemtext: {
-        fontSize: width * font.xs,
-        textAlign: 'center',
-        fontFamily: font.Primary,
-        color: colors.Text,
-        fontWeight: 'bold',
-    },
-    ApplyButtontext: {
-        fontSize: width * font.xs,
-        textAlign: 'center',
-        fontFamily: font.Primary,
-        color: colors.OnPrimary,
-    },
-    vaccancytext: {
-        fontSize: width * font.xs,
-        textAlign: 'center',
-        fontFamily: font.Primary,
-        color: colors.OnPrimary,
-        fontWeight: 'bold',
-    },
-    joblabletext: {
-        color: colors.Text,
-        fontSize: width * (font.xs + 0.008),
-        fontFamily: font.Primary,
-        fontWeight: 'bold',
-    },
-    jobdetailstext: {
-        color: colors.Text,
-        fontSize: width * font.xs,
-        fontFamily: font.Primary,
-
-        // textAlign: 'center',
-    },
-    JobModelHeader: {
-        color: colors.Secondry,
-        fontFamily: font.Primary, fontSize: width * font.md,
-        fontWeight: 'bold',
-    },
-    aaplyjobHeader: {
-        color: colors.Text,
-        fontFamily: font.Primary, fontSize: width * font.md,
-        fontWeight: 'bold',
-    },
-    membernametext: {
-        fontSize: width * font.md,
-        textAlign: 'center',
+export const createStyles = (colors: Color, font: Font) => {
+    const basetext = {
         color: colors.Text,
         fontFamily: font.Primary,
-        // fontWeight: 'bold',
-    },
-    memberpositiontext: {
-        fontSize: width * font.xs,
-        textAlign: 'center',
-        color: colors.Text,
-        fontFamily: font.Primary,
-        fontWeight: 'bold',
-    },
-    portfolioitemtext: {
-        fontFamily: font.Primary,
-        fontSize: width * font.sm,
-        color: colors.Text,
-        fontWeight: 'bold',
-    },
-    portfoliomodeltext: {
-        fontFamily: font.Primary,
-        fontSize: width * font.md,
-        color: colors.Text,
-        fontWeight: 'bold',
-    },
-    portfoliomodeldescription: {
-        fontFamily: font.Primary,
-        fontSize: width * (font.xs + 0.005),
-        color: colors.Text,
-        marginVertical: 10
-        // fontWeight: 'bold',
-    },
-    fotterheadertext: {
-        fontSize: width * font.md,
-        // textAlign: 'center',
-        color: 'rgba(51,51,51,.5)',
-        fontFamily: font.Primary,
-        fontWeight: 'bold',
-    },
-    fottertext: {
-        fontSize: width * font.xs,
-        // textAlign: 'center',
-        color: 'rgba(51,51,51,.5)',
-        fontFamily: font.Primary,
-        // fontWeight: 'bold',
+        fontSize: 16,
     }
-})
+
+    const boldtext: {} = {
+        fontWeight: 'bold'
+    }
+    const centertext: {} = {
+        textAlign: 'center'
+    }
+
+
+    return StyleSheet.create({
+        text: {
+            color: colors.Text,
+        },
+        logotext: StyleSheet.flatten([basetext, boldtext, {
+            fontSize: width * font.md2,
+            color: colors.Secondry,
+        }]),
+        locationtext: StyleSheet.flatten([basetext, {
+            fontSize: width * font.md,
+        }]),
+        companyprofileText: StyleSheet.flatten([basetext, {
+            fontSize: width * font.xs,
+            marginVertical: 20,
+        }]),
+        requestButtonText: StyleSheet.flatten([basetext, centertext, boldtext, {
+            fontSize: width * font.xs,
+            color: colors.OnPrimary,
+        }]),
+        eventText: StyleSheet.flatten([basetext, boldtext, {
+            fontSize: width * font.sm,
+            marginVertical: 10
+        }]),
+        servicetitle: StyleSheet.flatten([basetext, boldtext, {
+            fontSize: width * font.sm,
+            marginVertical: 10,
+            marginLeft: 20
+        }]),
+        serviceitemtext: StyleSheet.flatten([basetext, centertext, boldtext, {
+            fontSize: width * font.xs2,
+        }]),
+        QuoteHeaderText: StyleSheet.flatten([basetext, centertext, {
+            fontSize: width * font.md,
+        }]),
+        locationslectionbuttonext: StyleSheet.flatten([basetext, boldtext, {
+            fontSize: width * 0.037,
+        }]),
+        jobtitle: StyleSheet.flatten([basetext, boldtext, {
+            fontSize: width * font.sm,
+            marginVertical: 10,
+            marginHorizontal: 20
+        }]),
+        jobsitemtext: StyleSheet.flatten([basetext, boldtext, centertext, {
+            fontSize: width * font.xs,
+        }]),
+        ApplyButtontext: StyleSheet.flatten([basetext, centertext, {
+            fontSize: width * font.xs,
+            color: colors.OnPrimary,
+        }]),
+        vaccancytext: StyleSheet.flatten([basetext, boldtext, centertext, {
+            fontSize: width * font.xs,
+            color: colors.OnPrimary,
+        }]),
+        joblabletext: StyleSheet.flatten([basetext, boldtext, {
+            fontSize: width * (font.xs + 0.008),
+        }]),
+        jobdetailstext: StyleSheet.flatten([basetext, {
+            fontSize: width * font.xs,
+        }]),
+        JobModelHeader: StyleSheet.flatten([basetext, boldtext, {
+            color: colors.Secondry,
+            fontSize: width * font.md,
+        }]),
+        aaplyjobHeader: StyleSheet.flatten([basetext, boldtext, {
+            fontSize: width * font.md,
+        }]),
+        membernametext: StyleSheet.flatten([basetext, centertext, {
+            fontSize: width * font.md,
+        }]),
+        memberpositiontext: StyleSheet.flatten([basetext, centertext, boldtext, {
+            fontSize: width * font.xs,
+        }]),
+        portfolioitemtext: StyleSheet.flatten([basetext, boldtext, {
+            fontSize: width * font.sm,
+        }]),
+        portfoliomodeltext: StyleSheet.flatten([basetext, boldtext, {
+            fontSize: width * font.md,
+        }]),
+        portfoliomodeldescription: StyleSheet.flatten([basetext, {
+            fontSize: width * (font.xs + 0.005),
+            marginVertical: 10
+        }]),
+        fotterheadertext: StyleSheet.flatten([basetext, boldtext, {
+            fontSize: width * font.md,
+            color: 'rgba(51,51,51,.5)',
+        }]),
+        fottertext: StyleSheet.flatten([basetext, {
+            fontSize: width * font.xs,
+            color: 'rgba(51,51,51,.5)',
+        }])
+    })
+}
+
 
