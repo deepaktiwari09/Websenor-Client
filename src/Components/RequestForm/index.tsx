@@ -1,42 +1,35 @@
 import { View, Text, Pressable, TextInput, ScrollView, TouchableOpacity, Alert } from 'react-native';
 import React, { useMemo, useState } from 'react';
 import { createStyles, createContainers } from './styles';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../Management';
+import { useSelector, useDispatch } from 'react-redux';
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import DocumentPicker from 'react-native-document-picker'
-import type { DocumentPickerResponse } from 'react-native-document-picker';
-
+import { format } from 'date-fns';
+import type { RootState } from '../../Management';
+import type { formdata } from '../../Management/app/requestformManager';
+import { addRequestForm } from '../../Management/app/requestformManager';
 import LottieView from 'lottie-react-native';
 import { MassageSentAnimation } from '../../assets'
+import { DocumentPickerResponse } from 'react-native-document-picker';
 
 const formcheckbox = ['Hire a resource / team on Remote', 'Web Design & Development', 'Mobile Application Development', 'Annual Maintenance - AMC', 'Digital Marketing', 'Ecommerce Solutions', 'SEO (Search Engine Optimisation)', 'Software Development', 'other']
 
-type formdata = {
-    name: string,
-    email: string,
-    phone: string,
-    details: string,
-    checkbox: string[],
-    file: DocumentPickerResponse,
-}
-
-const inittialformdata = {
-    name: '',
-    email: '',
-    phone: '',
-    details: '',
-    checkbox: [],
-    file: {} as DocumentPickerResponse,
-}
-
 export default function RequestForm() {
     const { colors, fonts } = useSelector((state: RootState) => state.apperienceManager);
+    const dispatch = useDispatch();
     const styles = useMemo(() => createStyles(colors, fonts), [colors]);
     const containers = useMemo(() => createContainers(colors), [colors]);
     const [ismassagesend, setismassagesend] = useState(false);
 
-    const [formdata, setFormdata] = useState<formdata>(inittialformdata)
+    const [formdata, setFormdata] = useState<formdata>({
+        name: '',
+        email: '',
+        phone: '',
+        details: '',
+        checkbox: [],
+        file: {} as DocumentPickerResponse,
+        createdAt: format(new Date(), 'd LLL eee').toString()
+    });
     const [error, setError] = useState('');
     return (
         <ScrollView style={containers.Form}>
@@ -160,13 +153,15 @@ export default function RequestForm() {
                             else if (formdata.details.length < 49) {
                                 setError('Project Detail must be 50 Character long')
                             }
-                            else if (formdata.file.uri) {
+                            else if (!formdata.file.uri) {
+                                // console.log(formdata)
                                 setError('Must Select SRS file')
                             }
                             else if (formdata.name.length > 4 && formdata.email.includes('@gmail.com') && formdata.phone.length >= 10 && formdata.phone.length <= 13 && formdata.details.length > 49) {
                                 // console.log(formdata)
                                 setError('');
-                                setFormdata(inittialformdata);
+                                // setFormdata({});
+                                dispatch(addRequestForm(formdata))
                                 setismassagesend(true)
                             }
 

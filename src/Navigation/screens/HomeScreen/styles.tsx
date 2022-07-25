@@ -218,25 +218,26 @@ export const createStyles = (colors: Color, font: Font) => {
             color: colors.OnPrimary,
         }]),
         eventText: StyleSheet.flatten([basetext, boldtext, {
-            fontSize: width * font.sm,
+            fontSize: width * font.sm5,
             marginVertical: 10
         }]),
         servicetitle: StyleSheet.flatten([basetext, boldtext, {
-            fontSize: width * font.sm,
+            fontSize: width * font.sm5,
             marginVertical: 10,
             marginLeft: 20
         }]),
         serviceitemtext: StyleSheet.flatten([basetext, centertext, boldtext, {
             fontSize: width * font.xs2,
         }]),
-        QuoteHeaderText: StyleSheet.flatten([basetext, centertext, {
-            fontSize: width * font.md,
+        QuoteHeaderText: StyleSheet.flatten([basetext, boldtext, {
+            fontSize: width * font.sm8,
+
         }]),
         locationslectionbuttonext: StyleSheet.flatten([basetext, boldtext, {
-            fontSize: width * 0.037,
+            fontSize: width * font.xs7,
         }]),
         jobtitle: StyleSheet.flatten([basetext, boldtext, {
-            fontSize: width * font.sm,
+            fontSize: width * font.sm5,
             marginVertical: 10,
             marginHorizontal: 20
         }]),
@@ -265,10 +266,10 @@ export const createStyles = (colors: Color, font: Font) => {
             fontSize: width * font.md,
         }]),
         membernametext: StyleSheet.flatten([basetext, centertext, {
-            fontSize: width * font.md,
+            fontSize: width * font.md5,
         }]),
         memberpositiontext: StyleSheet.flatten([basetext, centertext, boldtext, {
-            fontSize: width * font.xs,
+            fontSize: width * font.xs2,
         }]),
         portfolioitemtext: StyleSheet.flatten([basetext, boldtext, {
             fontSize: width * font.sm,

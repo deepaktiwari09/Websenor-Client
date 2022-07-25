@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../../Management';
 import { setLocation } from '../../../Management/app/applocationManager';
 
-import { SwiperFlatList } from 'react-native-swiper-flatlist'; 9
+import { SwiperFlatList } from 'react-native-swiper-flatlist';
 import * as Data from './homescreen';
 
 import RBSheet from 'react-native-raw-bottom-sheet';
@@ -23,6 +23,7 @@ export default function HomeScreen({ navigation, route }) {
 
     const { colors, fonts } = useSelector((state: RootState) => state.apperienceManager);
     const { location } = useSelector((state: RootState) => state.locationManager);
+    const formcount = useSelector((state: RootState) => state.requestformManager).data.length;
     const dispatch = useDispatch();
 
     const styles = useMemo(() => createStyles(colors, fonts), [colors, fonts]);
@@ -45,7 +46,15 @@ export default function HomeScreen({ navigation, route }) {
                     <Text style={[styles.text, styles.locationtext]}>{location}</Text>
                     <Image source={require('../../../assets/images/downarrow.png')} style={{ width: 18, height: 18, marginLeft: 10, marginTop: 5 }} />
                 </Pressable>
-                <Text style={[styles.text, styles.logotext]}>Websenor</Text>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Pressable style={{ marginRight: 15 }} onPress={() => navigation.navigate('RequestScreen')}>
+                        <Image source={require('../../../assets/images/mail.png')} style={{ height: 20, width: 20 }} />
+                        <View style={{ position: 'absolute', top: -8, right: -8, zIndex: 2, borderRadius: 50, paddingHorizontal: 5, backgroundColor: colors.Secondry }}>
+                            <Text style={{ color: colors.OnSecondry, fontSize: width * fonts.xs }}>{formcount}</Text>
+                        </View>
+                    </Pressable>
+                    <Text style={[styles.text, styles.logotext]}>Websenor</Text>
+                </View>
             </View>
             <View style={containers.EventContainer}>
                 <Text style={styles.eventText}>Latest Events</Text>
@@ -165,7 +174,7 @@ export default function HomeScreen({ navigation, route }) {
                                     <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                                         <Text style={[styles.membernametext,
                                         (index == 1 || index == 2 ? {
-                                            fontSize: width * fonts.sm,
+                                            fontSize: width * fonts.sm5,
                                         } : {}),
                                         (index > 2 ? {
                                             fontSize: width * fonts.xs,
